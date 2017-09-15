@@ -1,0 +1,30 @@
+<h1>Login</h1>
+<form class="form form-horizontal" name="loginform" ng-submit="loginform.$valid && loginData(data)" novalidate>
+    <fieldset>
+      <div class="form-group">
+        <label for="login_name" class="col-md-4 control-label">Login Name</label>
+        <div class="col-md-4">
+          <input type="text" class="form-control" name="login_name" id="login_name" ng-model="data.login_name" required ng-minlength="3" ng-maxlength="10" ng-class="" />
+          <div ng-show="loginform.firstname.$error.required" class="text-danger">โปรดระบุ</div>
+          <div ng-show="loginform.firstname.$error.minlength" class="text-danger">โปรดระบุอย่างน้อย 3 ตัวอักษร</div>
+          <div ng-show="loginform.firstname.$error.maxlength" class="text-danger">ชื่อของคุณยาวเกินไป</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="login_password" class="col-md-4 control-label">Password</label>
+        <div class="col-md-4">
+          <input type="password" class="form-control" name="password" id="password" ng-model="data.password" ng-minlength="8" ng-maxlength="255" required />
+          <div ng-show="loginform.password.$error.required" class="text-danger">โปรดระบุ</div>
+          <div ng-show="loginform.password.$error.minlength" class="text-danger">โปรดระบุอย่างน้อย 8 ตัวอักษร</div>
+          <div ng-show="loginform.password.$error.maxlength" class="text-danger">Password ของคุณยาวเกินไป</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4 control-label"></label>
+        <div class="col-md-6">
+          <button type="submit" class="btn btn-primary" ng-disabled="!loginform.$valid">Login</button>
+        </div>
+      </div>
+      {{respDat}}
+    </fieldset>
+  </form>

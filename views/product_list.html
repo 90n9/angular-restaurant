@@ -1,0 +1,18 @@
+Amount : {{myCart.cart_amount}}
+Item : {{myCart.cart_item}}
+<div class="row">
+  <div class="col-sm-4 product_item" ng-repeat="product in product_list | filter:filters">
+    <div class="thumbnail">
+      <img ng-src="{{product.photo}}" alt="{{product.product_name}}" />
+      <div class="caption">
+        <h3>{{product.name}}</h3>
+        <p>{{product.detail}}</p>
+        <p>คงคลัง {{product.qty}}</p>
+        <p>
+          <span href="#" class="btn btn-primary" role="button" ng-click="myCart.addMenu(product)">เลือกเมนูนี้</span>
+          <b>{{product.price}} บาท</b>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

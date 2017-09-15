@@ -1,0 +1,13 @@
+<h1>Product</h1>
+<div class="row">
+  <div class="col-md-3">
+    <ul>
+      <li ng-repeat="category in category_list">
+        <a href="#!/product/{{category.id}}">
+          {{category.desc}}
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-9" ui-view="productlist"></div>
+</div>
