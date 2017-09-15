@@ -48,11 +48,11 @@ app.config(function($stateProvider, $urlRouterProvider){
   $stateProvider
   .state('home', {
     url: '/home',
-    templateUrl: '/views/home.html?v=1',
+    templateUrl: './views/home.html?v=1',
   })
   .state('about', {
     url: '/about',
-    templateUrl: '/views/about.html',
+    templateUrl: './views/about.html',
     controller: function($scope){
       $scope.about = restaurants.about;
     }
@@ -60,7 +60,7 @@ app.config(function($stateProvider, $urlRouterProvider){
   .state('product', {
     url: '/product',
     abstract: true,
-    templateUrl: '/views/product.html',
+    templateUrl: './views/product.html',
     controller: function($scope, myCart){
       $scope.category_list = catagory;
     }
@@ -70,7 +70,7 @@ app.config(function($stateProvider, $urlRouterProvider){
     params: {categoryId: ''},
     views: {
       'productlist' : {
-        templateUrl: '/views/product_list.html',
+        templateUrl: './views/product_list.html',
         controller: function($scope, $stateParams, myCart){
           $scope.category = $stateParams.categoryId;
           $scope.product_list = product;
@@ -83,14 +83,14 @@ app.config(function($stateProvider, $urlRouterProvider){
   })
   .state('contact', {
     url: '/contact',
-    templateUrl: '/views/contact.html',
+    templateUrl: './views/contact.html',
     controller: function($scope){
       $scope.contact = restaurants.contact;
     }
   })
   .state('login', {
     url: '/login',
-    templateUrl: '/views/login.html',
+    templateUrl: './views/login.html',
     controller: function($scope){
       $scope.data = {
         login_name: '',
