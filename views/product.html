@@ -25,23 +25,23 @@
         </div>
         <button type="button" class="btn btn-danger">ยืนยันการสั่งซื้อ</button>
         <hr />
-        <div ng-repeat="(cart_index, cart_item) in myCart.my_cart">
+        <div class="cart-item-list" ng-repeat="(cart_index, cart_item) in myCart.my_cart">
           <div class="row">
+            <div class="col-xs-12">
+                <span class="label label-danger">{{cart_item.product.catagory}}</span> <b>{{cart_item.product.name}}</b>
+            </div>
             <div class="col-xs-4">
               <img ng-src="{{cart_item.product.photo}}" alt="{{cart_item.product.product_name}}" class="img-responsive" />
             </div>
             <div class="col-xs-8">
               <div class="caption">
-                <h5>{{cart_item.product.name}}</h5>
                 <div>ราคา {{cart_item.product.price}} บาท</div>
-                <div>จำนวน:</div>
                 <input class="form-control" type="number" ng-model="myCart.my_cart[cart_index].qty" ng-change="myCart.updatePrice()" ng-max="myCart.my_cart[cart_index].product.qty"  />
+                <span ng-click="myCart.cancelItem(cart_item)" class="btn btn-danger">ยกเลิกรายการ</span>
               </div>
             </div>
-            <div class="col-xs-12">
-              <span ng-click="myCart.cancelItem(cart_item)" class="btn btn-danger">ยกเลิกรายการ</span>
-            </div>
           </div>
+          <hr />
         </div>
       </div>
     </div>

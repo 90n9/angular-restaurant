@@ -5,6 +5,11 @@ html, body{
   min-height: 100%;
   margin-bottom: -30px;
   padding-bottom:40px;
+  background-image: url('../resources/pixabay/japanese-food-2199962_1920.jpg');
+  background-position:top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment:fixed;
 }
 body{
   font-family: Prompt, 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
@@ -12,11 +17,6 @@ body{
 	background: #fff;
 	-webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url('../resources/pixabay/japanese-food-2199962_1920.jpg');
-  background-position:top center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment:fixed;
 }
 a{
   color: #EC601F;
@@ -78,4 +78,7 @@ h1{
 .product-price{
   font-size:1.6em;
   font-weight: lighter;
+}
+.cart-item-list{
+  text-align: left;
 }
