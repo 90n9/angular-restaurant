@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Reataurant System</title>
-    <link href=".\bower_components\bootstrap\dist\css\bootstrap.min.css" rel="stylesheet" />
+    <title>Gongmeng</title>
     <link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
+    <link href=".\bower_components\bootstrap\dist\css\bootstrap.min.css" rel="stylesheet" />
+    <link href=".\bower_components\font-awesome\css\font-awesome.min.css" rel="stylesheet" />
+    <link href=".\bower_components\animate.css\animate.min.css" rel="stylesheet" />
+    <link href=".\css\menu.css" rel="stylesheet" />
+    <link href=".\css\style.css" rel="stylesheet" />
     <style>
       .product_item:nth-child(3n+1){
         clear:left;
@@ -11,35 +15,26 @@
     </style>
   </head>
   <body ng-app="myApp">
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-default fixed-top">
+    <div class="top-nav">
       <div class="container">
-        <a class="navbar-brand" href="#">Japan Restaurant</a>
-        <ul class="nav navbar-nav">
-          <li class="nav-item">
-            <a ui-sref="home" class="nav-link">Home</a>
-          </li>
-          <li class="nav-item">
-            <a ui-sref="about" class="nav-link">About</a>
-          </li>
-          <li class="nav-item">
-            <a ui-sref="product.category" class="nav-link">Product</a>
-          </li>
-          <li class="nav-item">
-            <a ui-sref="contact" class="nav-link">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a ui-sref=login class="nav-link">Login</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <div class="container" ui-view></div>
-    <div class="container">
-      <div ng-controller="cartController">
-        <h2>My CART! {{myCart.cart_item}} {{myCart.cart_amount}}</h2>
+        <div class="pull-right" ng-controller="cartController">
+            <i class="fa fa-shopping-basket" aria-hidden="true"></i> {{myCart.cart_item}} รายการ {{myCart.cart_amount}} บาท
+        </div>
       </div>
     </div>
+    <section class="section section--menu" id="Adrian">
+      <h2 class="section__title"><a href="#!/home" class="logo"><img src="./imgs/logo.png" alt="Gongmeng" class="img-responsive" /></a></h2>
+      <span class="link-copy"></span>
+      <nav class="menu menu--adrian">
+        <ul class="menu__list">
+          <li class="menu__item menu__item--current"><a ui-sref="home" class="menu__link">หน้าแรก</a></li>
+          <li class="menu__item"><a ui-sref="about" class="menu__link">เกี่ยวกับเรา</a></li>
+          <li class="menu__item"><a ui-sref="product.category" class="menu__link">เมนู</a></li>
+          <li class="menu__item"><a ui-sref="contact" class="menu__link">ติดต่อเรา</a></li>
+        </ul>
+      </nav>
+    </section>
+    <div class="container" ui-view></div>
     <script src=".\bower_components\jquery\dist\jquery.js"></script>
     <script src=".\bower_components\bootstrap\dist\js\bootstrap.min.js"></script>
     <script src=".\bower_components\angular\angular.min.js"></script>

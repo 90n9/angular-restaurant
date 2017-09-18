@@ -1,13 +1,20 @@
-<h1>Product</h1>
-<div class="row">
-  <div class="col-md-3">
-    <ul>
-      <li ng-repeat="category in category_list">
-        <a href="#!/product/{{category.id}}">
+<section class="animated fadeInUp text-center" style="align-items: center;">
+  <nav class="menu" style="margin:0 auto;">
+    <ul class="menu__list">
+      <li class="menu__item">
+        <a class="menu__link" href="#!/product/">
+          ทั้งหมด
+        </a>
+      </li>
+      <li class="menu__item" ng-repeat="category in category_list">
+        <a class="menu__link" href="#!/product/{{category.id}}">
           {{category.desc}}
         </a>
       </li>
     </ul>
+  </nav>
+  <div class="row">
+    <div class="col-md-9" ui-view="productlist"></div>
+    <div class="col-md-3"></div>
   </div>
-  <div class="col-md-9" ui-view="productlist"></div>
-</div>
+</section>

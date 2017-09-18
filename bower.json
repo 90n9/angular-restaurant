@@ -1,0 +1,21 @@
+{
+  "name": "angular-restaurant",
+  "homepage": "https://github.com/90n9/angular-restaurant",
+  "authors": [
+    "Narathip Harijiratiwong <tholop@gmail.com>"
+  ],
+  "description": "Project for learn angularjs course",
+  "main": "index.html",
+  "keywords": [
+    "angularjs"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.6.6",
+    "angular-ui-router": "^1.0.6",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1",
+    "animate.css": "animation.css#^3.5.2",
+    "font-awesome": "^4.7.0"
+  }
+}
