@@ -16,6 +16,7 @@
     "bootstrap": "^3.3.7",
     "jquery": "^3.2.1",
     "animate.css": "animation.css#^3.5.2",
-    "font-awesome": "^4.7.0"
+    "font-awesome": "^4.7.0",
+    "simple-line-icons": "^2.4.1"
   }
 }

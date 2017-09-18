@@ -5,36 +5,42 @@
     <link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
     <link href=".\bower_components\bootstrap\dist\css\bootstrap.min.css" rel="stylesheet" />
     <link href=".\bower_components\font-awesome\css\font-awesome.min.css" rel="stylesheet" />
+    <link href=".\bower_components\simple-line-icons\css\simple-line-icons.css" rel="stylesheet" />
     <link href=".\bower_components\animate.css\animate.min.css" rel="stylesheet" />
     <link href=".\css\menu.css" rel="stylesheet" />
     <link href=".\css\style.css" rel="stylesheet" />
-    <style>
-      .product_item:nth-child(3n+1){
-        clear:left;
-      }
-    </style>
   </head>
   <body ng-app="myApp">
-    <div class="top-nav">
-      <div class="container">
-        <div class="pull-right" ng-controller="cartController">
-            <i class="fa fa-shopping-basket" aria-hidden="true"></i> {{myCart.cart_item}} รายการ {{myCart.cart_amount}} บาท
+    <div class="page-wrap">
+      <div class="top-nav">
+        <div class="container">
+          <div class="pull-right" ng-controller="cartController">
+            <a ui-sref="product.category">
+              <i class="icon-book-open" aria-hidden="true"></i> {{myCart.cart_item}} รายการ {{myCart.cart_amount}} บาท
+            </a>
+          </div>
         </div>
       </div>
+      <section class="section section--menu" id="Adrian">
+        <h2 class="section__title"><a href="#!/home" class="logo"><img src="./imgs/logo.png" alt="Gongmeng" class="img-responsive" /></a></h2>
+        <span class="link-copy"></span>
+        <nav class="menu menu--adrian">
+          <ul class="menu__list">
+            <li class="menu__item menu__item--current"><a ui-sref="home" class="menu__link">หน้าแรก</a></li>
+            <li class="menu__item"><a ui-sref="about" class="menu__link">เกี่ยวกับเรา</a></li>
+            <li class="menu__item"><a ui-sref="product.category" class="menu__link">เมนูอาหาร</a></li>
+            <li class="menu__item"><a ui-sref="contact" class="menu__link">ติดต่อเรา</a></li>
+          </ul>
+        </nav>
+      </section>
+      <div class="container" ui-view></div>
     </div>
-    <section class="section section--menu" id="Adrian">
-      <h2 class="section__title"><a href="#!/home" class="logo"><img src="./imgs/logo.png" alt="Gongmeng" class="img-responsive" /></a></h2>
-      <span class="link-copy"></span>
-      <nav class="menu menu--adrian">
-        <ul class="menu__list">
-          <li class="menu__item menu__item--current"><a ui-sref="home" class="menu__link">หน้าแรก</a></li>
-          <li class="menu__item"><a ui-sref="about" class="menu__link">เกี่ยวกับเรา</a></li>
-          <li class="menu__item"><a ui-sref="product.category" class="menu__link">เมนู</a></li>
-          <li class="menu__item"><a ui-sref="contact" class="menu__link">ติดต่อเรา</a></li>
-        </ul>
-      </nav>
+    <section class="footer">
+      <div class="container">
+        &copy; Copyright 2017 GongMeng.
+        <div class="pull-right">Design by Gongideas</div>
+      </div>
     </section>
-    <div class="container" ui-view></div>
     <script src=".\bower_components\jquery\dist\jquery.js"></script>
     <script src=".\bower_components\bootstrap\dist\js\bootstrap.min.js"></script>
     <script src=".\bower_components\angular\angular.min.js"></script>
