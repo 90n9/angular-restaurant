@@ -34,11 +34,10 @@
               <div class="caption">
                 <div>ราคา {{cart_item.product.price}} บาท</div>
                 <div>
-                  <button type="button" class="btn btn-danger" ng-click="myCart.my_cart[cart_index].qty++;myCart.updatePrice();">+</button>
+                  <button type="button" class="btn btn-danger" ng-click="myCart.my_cart[cart_index].qty = myCart.my_cart[cart_index].qty - 1;myCart.updatePrice();">-</button>
                   <span>{{myCart.my_cart[cart_index].qty}}</span>
-                  <span class="btn btn-danger">-</span>
+                  <button type="button" class="btn btn-danger" class="btn btn-danger" ng-click="myCart.my_cart[cart_index].qty = myCart.my_cart[cart_index].qty + 1">+</button>
                 </div>
-                <input class="form-control" type="number" ng-model="myCart.my_cart[cart_index].qty" ng-change="myCart.updatePrice()" ng-max="myCart.my_cart[cart_index].product.qty"  />
               </div>
             </div>
             <div class="col-xs-12">
