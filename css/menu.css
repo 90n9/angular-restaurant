@@ -59,11 +59,11 @@
 
 .menu--adrian .menu__link:hover,
 .menu--adrian .menu__link:focus {
-	color: #EC601F;
+	color: #dd0000;
 }
 
 .menu--adrian .menu__item--current .menu__link {
-	color: #d94f5c;
+	color: #dd0000;
 }
 
 .menu--adrian .menu__link::before {

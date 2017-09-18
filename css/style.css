@@ -6,11 +6,7 @@ html, body{
   padding-top:30px;
   margin-bottom: -30px;
   padding-bottom:50px;
-  background-image: url('../resources/pixabay/japanese-food-2199962_1920.jpg');
-  background-position:top center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment:fixed;
+  background-color: rgba(0,0,0,0.6);
 }
 body{
   font-family: Prompt, 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
@@ -18,20 +14,25 @@ body{
 	background: #fff;
 	-webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('../resources/pixabay/japanese-food-2199962_1920.jpg');
+  background-position:top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment:fixed;
 }
 a{
-  color: #EC601F;
+  color: #fff;
 }
 a:hover, a:focus{
   text-decoration: none;
-  color: #FF5100;
+  color: #dd0000;
 }
 h1{
   color: #fff;
 }
 .top-nav{
   background:#ffffff;
-  color: #EC601F;
+  color: #dd0000;
   padding:5px 0;
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
@@ -42,7 +43,7 @@ h1{
        box-shadow: 0 4px 4px -2px rgba(0,0,0,0.5);
 }
 .top-nav a{
-  color: #EC601F;
+  color: #dd0000;
 }
 .footer{
   background-color: #000;
@@ -90,3 +91,16 @@ h1{
 .cart-item-list{
   text-align: left;
 }
+
+.btn-danger {
+  color: #fff;
+  background-color: #dd0000;
+  border-color: #dd0000;
+}
+.label-danger {
+  background-color: #dd0000;
+}
+.text-danger {
+  color: #dd0000;
+}
+
