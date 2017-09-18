@@ -8,6 +8,7 @@ body{
   background-position:top center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment:fixed;
 }
 .top-nav{
   background:#eaeaea;
