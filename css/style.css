@@ -3,8 +3,9 @@ html, body{
 }
 .page-wrap {
   min-height: 100%;
+  padding-top:30px;
   margin-bottom: -30px;
-  padding-bottom:40px;
+  padding-bottom:30px;
   background-image: url('../resources/pixabay/japanese-food-2199962_1920.jpg');
   background-position:top center;
   background-size: cover;
@@ -32,6 +33,13 @@ h1{
   background:#ffffff;
   color: #EC601F;
   padding:5px 0;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width:100%;
+  z-index: 10000;
+  -webkit-box-shadow: 0 4px 4px -2px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0 4px 4px -2px rgba(0,0,0,0.5);
+       box-shadow: 0 4px 4px -2px rgba(0,0,0,0.5);
 }
 .top-nav a{
   color: #EC601F;
