@@ -33,6 +33,16 @@ app.factory('myCart', function() {
 		}
 	};
 });
+app.factory('myNav', function() {  
+	return {
+		data : {
+      current_nav : "",
+      changeNav: function(new_nav){
+        this.current_nav = new_nav;
+      }
+		}
+	};
+});
 var calc_cart = function(data){
   var cart_item = 0;
   var cart_amount = 0;
@@ -49,11 +59,15 @@ app.config(function($stateProvider, $urlRouterProvider){
   .state('home', {
     url: '/home',
     templateUrl: './views/home.html?v=1',
+    controller: function($scope, myNav){
+      myNav.data.changeNav("home");
+    }
   })
   .state('about', {
     url: '/about',
     templateUrl: './views/about.html',
-    controller: function($scope){
+    controller: function($scope, myNav){
+      myNav.data.changeNav("about");
       $scope.about = restaurants.about;
     }
   })
@@ -61,7 +75,8 @@ app.config(function($stateProvider, $urlRouterProvider){
     url: '/product',
     abstract: true,
     templateUrl: './views/product.html',
-    controller: function($scope, myCart){
+    controller: function($scope, myCart, myNav){
+      myNav.data.changeNav("product");
       $scope.category_list = catagory;
     }
   })
@@ -84,14 +99,16 @@ app.config(function($stateProvider, $urlRouterProvider){
   .state('contact', {
     url: '/contact',
     templateUrl: './views/contact.html',
-    controller: function($scope){
+    controller: function($scope, myNav){
+      myNav.data.changeNav("contact");
       $scope.contact = restaurants.contact;
     }
   })
   .state('login', {
     url: '/login',
     templateUrl: './views/login.html',
-    controller: function($scope){
+    controller: function($scope, myNav){
+      myNav.data.changeNav("login");
       $scope.data = {
         login_name: '',
         password: ''
@@ -111,4 +128,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 });
 app.controller('cartController', function($scope, myCart){
   $scope.myCart = myCart.data;
+});
+app.controller('navController', function($scope, myNav){
+  $scope.myNav = myNav.data;
 });
