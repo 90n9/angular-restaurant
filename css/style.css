@@ -103,4 +103,34 @@ h1{
 .text-danger {
   color: #dd0000;
 }
-
+#btn-close-cart{
+  display:none;
+}
+@media screen and (max-width: 992px) {
+  #my-order {
+    position: fixed;
+    top:40px;
+    right:0;
+    min-width:280px;
+    max-width:300px;
+    z-index: 1000;
+  }
+  #my-order.flipInX {
+    right:0;
+    opacity: 1;
+  }
+  #cart-list{
+    max-height: 334px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  #btn-close-cart{
+    display:block;
+    cursor:pointer;
+    float:right;
+    font-size:20px;
+  }
+  #btn-close-cart:hover{
+    color: #dd0000;
+  }
+}

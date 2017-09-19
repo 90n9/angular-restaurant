@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/png" href="./imgs/favicon.png">
     <title>Gongmeng</title>
-    <link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
+    <!--link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet"-->
     <link href=".\bower_components\bootstrap\dist\css\bootstrap.min.css" rel="stylesheet" />
     <link href=".\bower_components\font-awesome\css\font-awesome.min.css" rel="stylesheet" />
     <link href=".\bower_components\simple-line-icons\css\simple-line-icons.css" rel="stylesheet" />
@@ -19,7 +19,7 @@
       <div class="top-nav">
         <div class="container">
           <div class="pull-right" ng-controller="cartController">
-            <a ui-sref="product.category">
+            <a ui-sref="product.category" ng-click="myCart.openCart()">
               <i class="icon-book-open" aria-hidden="true"></i> {{myCart.cart_item}} รายการ {{myCart.cart_amount}} บาท
             </a>
           </div>
