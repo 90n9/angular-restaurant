@@ -5,7 +5,7 @@ app.factory('myCart', function() {
       my_cart : [],
       cart_item: 0,
       cart_amount: 0,
-      open_cart: 'hide',
+      open_cart: 'hidecart',
       addMenu: function(product){
         var is_in_cart = false;
         var cart_index = 0;

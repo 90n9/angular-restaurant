@@ -115,6 +115,9 @@ h1{
     max-width:300px;
     z-index: 1000;
   }
+  #my-order.hidecart {
+    display:none;
+  }
   #my-order.flipInX {
     right:0;
     opacity: 1;
